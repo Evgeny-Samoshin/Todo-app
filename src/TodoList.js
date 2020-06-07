@@ -1,15 +1,16 @@
 import React from 'react';
+import List from '@material-ui/core/List';
 import Todo from './Todo';
 
 const TodoList = (props) => {
     
     return( 
-      <div className='list-wrapper'>
+      <List className='list-wrapper'>
         {props.tasks.map((todo, index) => (
           <Todo content={todo} key={index} id={index} onDelete={props.onDelete} />
           )     
         )}
-      </div>
+      </List>
     );
   }
 

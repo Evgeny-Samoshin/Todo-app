@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from './Header';
 import TodoList from './TodoList';
 import SubmitForm from './SubmitForm';
-
+import Paper from '@material-ui/core/Paper';
 
 const Sidebar = () => {
     const [tasks, setTasks] = useState([]);
@@ -17,15 +17,12 @@ const Sidebar = () => {
       setTasks( newArr );
     }
 
-    
       return(
-        <div className='wrapper'>
-          <div className='card frame'>
-            <Header numTodos={tasks.length} />
-            <TodoList tasks={tasks} onDelete={handleDelete} />
-            <SubmitForm onFormSubmit={handleSubmit} />
-          </div>
-        </div>
+        <Paper className=''>
+          <Header numTodos={tasks.length} />
+          <TodoList tasks={tasks} onDelete={handleDelete} />
+          <SubmitForm onFormSubmit={handleSubmit} />
+        </Paper>
       );
     } 
     
