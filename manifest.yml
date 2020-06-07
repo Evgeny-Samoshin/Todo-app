@@ -1,0 +1,8 @@
+applications:
+  - name: todo-app-ui
+    disk_quota: 512M
+    instances: 1
+    memory: 512M
+    buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+    routes:
+      - route: todo-app-ui.cfapps.io
