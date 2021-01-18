@@ -10,13 +10,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-  const Header = (props) => {
+  const Title = (props) => {
     const classes = useStyles();
 
     return(
       <Typography variant="h4" component="h1" color="initial" className={classes.root}>
-        You have {props.numTodos} Todos
+        {props.children} 
       </Typography>
     )
   }
-export default Header;
+export default Title;
